@@ -12,6 +12,7 @@ public class OperacionesArreglos {
             suma = suma + num[i];
         }
         return suma;
+        
     }
     
 }
