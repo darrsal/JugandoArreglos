@@ -7,7 +7,6 @@ public class OperacionesArreglos {
             return 0f;
         
         float suma = 0f;
-        
         //Recorrer el arreglo
         for (int i = 0; i < num.length; i++) {
             suma = suma + num[i];
