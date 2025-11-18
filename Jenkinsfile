@@ -17,7 +17,7 @@ pipeline{
       }
       stage('Compilacion'){
         steps{
-            sh 'mvn -f $POM -B'
+            sh 'mvn -f $POM -B clean'
         }
       }
       stage('Prueba'){
