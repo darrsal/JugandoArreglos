@@ -22,7 +22,7 @@ pipeline{
       }
       stage('Prueba'){
         steps{
-            sh 'mvn -f $POM test'
+            sh 'mvn -f $POM -B test'
         }
         post{
             always{
@@ -32,7 +32,7 @@ pipeline{
       }
       stage('Empaquetado'){
         steps{
-           sh 'mvn -f $POM package'
+           sh 'mvn -f $POM -B package'
             archiveArtifacts artifacts: 'jugandoArreglos/target/*.jar', fingerprint:true
         }
       }  
