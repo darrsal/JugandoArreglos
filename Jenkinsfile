@@ -6,7 +6,7 @@ pipeline{
    triggers{
       githubPush()
    }
-   enviroment{
+   environment {
         POM="jugandoArreglos/pom.xml"
    }
    stages{
