@@ -22,7 +22,7 @@ pipeline{
       }
       stage('Prueba'){
         steps{
-            sh 'mvn -f $POM test'
+            sh 'mvn -f $POM verify'
         }
         post{
             always{
