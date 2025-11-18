@@ -32,6 +32,7 @@ pipeline{
       }
       stage('Empaquetado'){
         steps{
+           sh 'mvn -f $POM package'
             archiveArtifacts artifacts: 'jugandoArreglos/target/*.jar', fingerprint:true
         }
       }  
