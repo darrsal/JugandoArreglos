@@ -17,12 +17,12 @@ pipeline{
       }
       stage('Compilacion'){
         steps{
-            sh 'mvn -f $POM -B clean'
+            sh 'mvn -f $POM -B clean package'
         }
       }
       stage('Prueba'){
         steps{
-            sh 'mvn -f $POM -B test'
+            sh 'mvn -f $POM test'
         }
         post{
             always{
